@@ -1,0 +1,345 @@
+/*desktop*/
+/* @media (max-width:768px) { */
+    
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    html {
+        scroll-behavior: smooth;
+        font-family: lato, sans-serif;
+        font-size: 15px;
+    }
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+    /* CSS nav */
+    #menu {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 46.4px;
+        width: 100%;
+        background-color: black;
+        display: block;
+        overflow: hidden;
+    }
+    #list-menu {
+        list-style: none;
+    }
+    #list-menu > li {
+        display:block;
+        position: relative;
+    }
+    #list-menu > li > a{
+        line-height: 46.4px;
+        padding: 0 24px;
+        color: white;
+        text-transform: uppercase;
+    }
+    .down {
+        position: absolute;
+        left: 0;
+        background-color: #FFF;
+        width: 100%;
+        list-style: none;
+        display: none;
+        box-shadow:  0px 0px 7px rgba(0, 0, 0,0.5);
+    }
+    .down > li {
+        line-height: 38px;
+        width: 100%;
+    }
+    .down > li > a{
+        font-size: 15px;
+        color:black;
+        padding: 0 16px;
+    }
+    .down > li:hover > a {
+        background-color: #ccc;
+        display: block;
+    }
+    #list-menu > li:hover .down {
+        display: block;
+    }
+    /* CSS Search */
+    .bi-search {
+        display: none;
+    }
+    .search {
+        float: right;
+        color: red;
+        position: absolute;
+        top: 0 ;
+        right: 0;
+    }
+    .bi-justify{
+        font-size: 46.4px;
+        margin-right: 8px;
+    }
+    /* css slider */
+    #slider  {
+        width: 100%;
+        position: relative;
+    }
+    #slider img {
+        width: 100%;
+    }
+    #slider .text-slider {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        text-align: center;
+        transform: translateX(-50%);
+        color: white;
+        padding: 32px 16px;
+    }
+    #slider .text-slider h3 {
+        padding: 10px 0;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: "Segoe UI",Arial,sans-serif;
+    }
+    #slider .text-slider p {
+        margin: 10px 0;
+        font-weight: bold;
+    }
+    /* CSS content */
+    #content {
+        margin: 0 auto;
+        width: 768px;
+        text-align: center;
+        padding: 46px 16px;
+    }
+    #content h2 {
+        margin: 10px 0;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: "Segoe UI",Arial,sans-serif;
+    }
+    #content span {
+        margin: 15px 0px;
+        font-size: 15px;
+        opacity: 0.7;
+        font-style: italic;
+    }
+    #content p {
+        margin: 15px 0;
+        text-align: justify;
+        font-size: 14.7px;
+        line-height: 1.5;
+    }
+    #content .list-content {
+        margin: 32px 0;
+        display: flex;
+    }
+    #content .list-content .the-ban {
+        width: calc(100%/3);
+        padding: 32px 0;
+    }
+    #content .list-content .the-ban p {
+        text-transform: capitalize ;
+        text-align: center;
+        margin: 15px 0;
+        font-size: 15px;
+    }
+    #content .list-content .the-ban img {
+        width: 60%;
+        height: auto;
+        border-radius: 5px;
+    }
+    /* CSS tour-date */
+    #tour-date {
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+    #tour-date .tourdate {
+        width: 768px;
+        margin: 0 auto;
+        padding: 46px 16px;
+    }
+    #tour-date .tourdate h2 {
+        font-family: "Segoe UI",Arial,sans-serif;
+        margin: 10px 0;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: white;
+    }
+    #tour-date .tourdate  span {
+        margin: 15px 0px;
+        font-size: 15px;
+        opacity: 0.7;
+        font-style: italic;
+    } 
+    #tour-date .tourdate .list-tour {
+        margin-top: 25px;
+        background-color: white;
+        color: #757575;
+        list-style: none;
+    }
+    #tour-date .tourdate .list-tour li {
+        padding: 10px 16px;
+        border-bottom: #ddd 0.1px solid;
+        text-align: left;
+        font-size: 16px;
+    }
+    #tour-date .tourdate .list-tour .sold-out {
+        background-color: red;
+        color: white;
+        padding: 2 8px;
+        margin: 0 8px;
+        font-style: normal;
+    }
+    #tour-date .tourdate .list-tour .sold-in {
+        float: right;
+        color: white;
+        background-color: black;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        margin: 0;
+        border-radius: 50%;
+        opacity: 1;
+        font-style: normal;
+    }
+    #tour-date .tour {
+        margin: 32px 16px;
+        display: flex;
+        width: 768px;
+        margin: 0 auto;
+        color: black;
+    }
+    #tour-date .tour .list-date {
+        margin: 0 8px 16px 8px;
+        width: calc(100%/3);
+        background-color: white;
+    }
+    #tour-date .tour .list-date img {
+        width: 100%;
+    }
+    #tour-date .tour .list-date .list-date-about {
+        padding: 0 16px;
+        text-align: left;
+    }
+    #tour-date .tour .list-date .list-date-about h4 {
+        margin: 15px 0;
+    }
+    #tour-date .tour .list-date .list-date-about span {
+        padding: 15px 0;
+        opacity: 0.7;
+    }
+    #tour-date .tour .list-date .list-date-about p {
+        padding: 15px 0;
+        line-height: 1.5;
+    }
+    #tour-date .tour .list-date .list-date-about button {
+        padding: 8px 16px;
+        background-color: black;
+        border: none;
+        margin-bottom: 16px;
+    }
+    #tour-date .tour .list-date .list-date-about a {
+        text-decoration: none;
+        color: white;
+    
+    }
+    .col-50 {
+        width: 50%;
+    }
+    .col-100 {
+        width: 100%;
+    }
+    
+    /* CSS Contact */
+    #contact {
+        margin: 0 auto;
+        width: 768px;
+        text-align: center;
+        padding: 46px 16px;
+    }
+    #contact h2 {
+        margin: 10px 0;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-family: "Segoe UI",Arial,sans-serif;
+    }
+    #contact span {
+        margin: 15px 0px;
+        font-size: 15px;
+        opacity: 0.7;
+        font-style: italic;
+    }
+    #contact .list-contact {
+        padding: 32px 0;
+        display: flex;
+        text-align: left;
+    }
+    #contact .list-contact .contact-map {
+        list-style: none;
+    }
+    #contact .list-contact .contact-map li {
+        line-height: 1.5;
+    }
+    #contact .list-contact .contact-map .item-contact {
+        padding-right: 15px;
+    }
+    #contact .list-contact .contact-send .name-email {
+        display: flex;
+    }
+    #contact .list-contact .contact-send .text-input {
+        padding: 8px;
+    }
+    #contact .list-contact .contact-send .name {
+        margin: 0 4px 4px 0;
+    }
+    #contact .list-contact .contact-send .email {
+        margin: 0 0 4px 4px;
+    }
+    #contact .list-contact .contact-send .msg {
+        margin: 4px 0  0;
+    }
+    #contact .list-contact .contact-send .send {
+        margin: 16px 0;
+        float: right;
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+    }
+    #maps img {
+        width: 100%;
+        height: auto;
+        filter: grayscale(50%);
+    }
+    #foot {
+        padding:64px 16px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #foot .list-foot {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+    #foot .item-foot {
+        font-size: 24px;
+        padding:4px;
+        color: black;
+        opacity: 0.5;
+    }
+    
+    #foot span,a {
+        font-size: 16px;
+        color: #757575;
+    }
+    
